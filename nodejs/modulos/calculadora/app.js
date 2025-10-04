@@ -15,5 +15,5 @@ console.log(`Resultado da multiplicação: ${resultadoMultiplicacao}`);
 const resultadoDivisao = funcoesMatematicas.dividir(7, 7);
 console.log(`Resultado da divisão: ${resultadoDivisao}`);     
 
-const idade = calculadora_idade.idade("ANNNAAA", 2009, 2050);
+const idade = calculadora_idade.idade("Laura Bitencourt", 2009, 2050);
 console.log(idade);
