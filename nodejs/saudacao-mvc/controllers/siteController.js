@@ -10,7 +10,7 @@ module.exports = {
   },
 
   saudacao: (req, res) => {
-    const { nome, idade, apelido } = req.body;
+    const { nome, idade,apelido } = req.body;
     const mensagem = saudacaoModel.gerarMensagemPersonalizada(nome, idade, apelido);
     res.send(`<h1>${mensagem}</h1>`);
   },
