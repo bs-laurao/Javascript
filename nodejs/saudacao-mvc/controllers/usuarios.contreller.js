@@ -1,16 +1,21 @@
-const usuariosModel = require('../models/usuariosModel');
-const { index } = require('./siteController');
+const usuariosModel = require('../models/usuariosModel'); 
 
-module.exports =
+module.exports = {
 
-index: (req, res) => {
-    res.sendFile('usuarios.html', { root: './views' });
+    index: (req, res) => {
+       
+        res.sendFile('usuarios.html', { root: './views' });
     },
+
     formulario: (req, res) => {
-    res.sendFile('formulario.html', { root: './views' });
+        
+        res.sendFile('formLogin.html', { root: './views' });
     },
+
     login: (req, res) => {
-    const { login, senha } = req.body;
-    const mensagemLogin= usuariosModel.vgerarMensagem(login, senha);
-    res.send(`<h1>${mensagemLogin}</h1>`);
-     };
+        const { login, senha } = req.body;
+
+        const mensagemLogin = usuariosModel.gerarMensagemLogin(login, senha);
+        res.send(`<h1>${mensagemLogin}</h1>`);
+    }
+};

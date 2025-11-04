@@ -10,8 +10,8 @@ module.exports = {
   },
 
   saudacao: (req, res) => {
-    const { nome, idade,apelido } = req.body;
-    const mensagem = saudacaoModel.gerarMensagemPersonalizada(nome, idade, apelido);
+    const { nome, idade } = req.body;
+    const mensagem = saudacaoModel.gerarMensagemPersonalizada(nome, idade);
     res.send(`<h1>${mensagem}</h1>`);
   },
 
@@ -22,5 +22,7 @@ module.exports = {
   camisetas: (req, res) => {
     res.sendFile('camisetas.html', { root: './views' });
   }
+  
 
 };
+

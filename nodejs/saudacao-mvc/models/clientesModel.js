@@ -1,16 +1,14 @@
 module.exports = {
-  verificarLogin: (login, senha) => {
+  gerarMensagemPersonalizada: (login, senha) => {
     let acesso;
-    
 
     if (login === "Laura" && senha === "12345") {
-      acesso = "Logado com sucesso!";
+    acesso = "Logado";
+
     } else {
-      acesso = "Negado: Login ou senha incorretos.";
+        acesso = "Negado";
     }
 
-    
-      
-    return `Olá, ${login} seu acesso foi: ${apelido}!`;
+    return `Olá, ${login}, seu acesso foi: ${acesso}!`;
   }
 };
